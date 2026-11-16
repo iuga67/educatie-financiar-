@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Educație financiară</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header id="titlu">
+    <h1>Educație financiară</h1>
+    <p>Învață să gestionezi banii!</p>
+  </header>
+
+  <nav id="meniu">
+    <button class="nav-button" data-page="acasa">Acasă</button>
+    <button class="nav-button" data-page="lectii">Lecții financiare</button>
+    <button class="nav-button" data-page="buget">Bugetul meu</button>
+    <button class="nav-button" data-page="quiz">Quiz financiar</button>
+    <button class="nav-button" data-page="progres">Progres</button>
+  </nav>
+
+  <main>
+
+    <!-- PAGINA ACASĂ -->
+    <section id="acasa" class="page active">
+      <h2>Bine ai venit!</h2>
+      <p>
+        Descoperă cum să economisești, să îți organizezi
+        bugetul și să iei decizii financiare responsabile.
+      </p>
+      <button class="action-button" data-page="quiz">
+        Începe quiz-ul
+      </button>
+    </section>
+
+    <!-- LECȚII FINANCIARE -->
+    <section id="lectii" class="page">
+      <h2>Lecții financiare</h2>
+
+      <article class="lesson">
+        <h3>1. Venituri și cheltuieli</h3>
+        <p>
+          Veniturile reprezintă banii pe care îi primești,
+          iar cheltuielile sunt banii pe care îi folosești
+          pentru cumpărături și alte necesități.
+        </p>
+      </article>
+
+      <article class="lesson">
+        <h3>2. Economisirea</h3>
+        <p>
+          Economisirea înseamnă să păstrezi o parte din bani
+          pentru viitor sau pentru obiective importante.
+        </p>
+      </article>
+
+      <article class="lesson">
+        <h3>3. Nevoi și dorințe</h3>
+        <p>
+          Nevoile sunt lucrurile de care avem nevoie,
+          precum hrana și hainele. Dorințele sunt lucruri
+          pe care ni le dorim, dar care nu sunt esențiale.
+        </p>
+      </article>
+
+      <article class="lesson">
+        <h3>4. Dobânda</h3>
+        <p>
+          Dobânda reprezintă o sumă de bani calculată
+          în funcție de o sumă economisită sau împrumutată.
+        </p>
+      </article>
+    </section>
+
+    <!-- BUGETUL MEU -->
+    <section id="buget" class="page">
+      <h2>Bugetul meu</h2>
+      <p>Introdu veniturile și cheltuielile tale pentru a calcula soldul.</p>
+
+      <label for="venit">Venituri (lei):</label>
+      <input type="number" id="venit" min="0" placeholder="Exemplu: 500">
+
+      <label for="cheltuieli">Cheltuieli (lei):</label>
+      <input type="number" id="cheltuieli" min="0" placeholder="Exemplu: 200">
+
+      <button id="calculeaza" class="action-button">
+        Calculează bugetul
+      </button>
+
+      <p id="rezultatBuget"></p>
+    </section>
+
+    <!-- QUIZ FINANCIAR -->
+    <section id="quiz" class="page">
+      <h2>Quiz financiar</h2>
+      <p>Răspunde la cele 5 întrebări și testează-ți cunoștințele!</p>
+
+      <button id="start" class="action-button">
+        ÎNCEPE QUIZ-ul
+      </button>
+
+      <div id="zonaQuiz" hidden>
+        <p id="numarIntrebare"></p>
+        <h3 id="intrebare"></h3>
+
+        <div id="raspunsuri"></div>
+
+        <p id="mesaj"></p>
+        <p id="scor">Scor: 0 puncte</p>
+
+        <button id="urmatoarea" class="action-button" hidden>
+          Următoarea întrebare
+        </button>
+      </div>
+
+      <div id="finalQuiz" hidden>
+        <h3>Felicitări! Ai terminat quiz-ul!</h3>
+        <p id="scorFinal"></p>
+        <button id="restart" class="action-button">
+          Reia quiz-ul
+        </button>
+      </div>
+    </section>
+
+    <!-- PROGRES -->
+    <section id="progres" class="page">
+      <h2>Progresul meu</h2>
+      <p id="progresQuiz">Quiz-uri finalizate: 0</p>
+      <p id="celMaiBunScor">Cel mai bun scor: 0 puncte</p>
+      <p id="lectiiCitite">Lecții disponibile: 4</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Educație financiară - Învață să folosești banii responsabil!</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
